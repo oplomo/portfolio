@@ -1,0 +1,581 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+    <section class="hero-section" id="home">
+
+    <div class="hero-content">
+
+        <!-- About Section -->
+        <div class="about-section">
+            <div class="typewriter" >
+                <h1 id="typing-text"></h1>
+            </div>
+            <p class="about-description" style="color: #888888;">
+                I'm a full-stack developer, software engineer, and data analyst based in Nairobi, Kenya. 
+                I build responsive web applications using HTML, CSS, JavaScript, Bootstrap, and Python Django. 
+                I'm also skilled in SQL, C++, and data analysis, with a passion for solving problems 
+                and turning ideas into functional solutions.
+            </p>
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-news" id="newsButton" style="display: none;">Show me some real time data</button><br>
+                <button class="btn-resume"><a href="{% static 'docs/my first resume.pdf' %}" download >Download Resume</a></button>
+                
+            </div>
+
+            <!-- Social Media Icons -->
+                <div class="social-media">
+    <h4>Connect with me</h4>
+    <div class="social-icons">
+        <!-- GitHub -->
+        <a href="https://github.com/oplomo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/adams-square-5249b6371/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+        </a>
+        
+        <!-- Twitter/X -->
+        <a href="https://x.com/AdamsS74124" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+        </a>
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/adams_sqr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+</div>
+            </div>
+
+        </div>
+
+        
+        <!-- Profile Image with Horns (Optional) -->
+        <div class="profile-image-section"><img src="{% static 'images/me.jpeg' %}" alt="Adams" class="hero-image"></div>
+
+    </div>
+
+</section>
+
+
+<div class="about-container" id="about">
+    
+    <!-- Left Side: Text -->
+    <div class="about-text">
+        <h2 class="about-heading">About Me</h2>
+        <p class="about-description">
+              I'm a curious and hands-on developer who enjoys turning ideas into interactive, user-friendly experiences.  
+  I care about clean code, thoughtful design, and building solutions that actually solve problems — even the small ones that often go unnoticed.  
+  Every project I’ve worked on has taught me something new, and if you look around, you might just spot a few of those lessons in action.  
+  One of my past projects nearly convinced my computer it had a personality of its own — but let’s not talk about that 🤭😂.
+        </p>
+
+        <div class="experience-cards">
+            <div class="experience-card">
+                <h4>3+ Years</h4>
+                <p>Experience</p>
+            </div>
+            <div class="experience-card">
+                <h4>Full-Stack</h4>
+                <p>Development</p>
+            </div>
+            <div class="experience-card">
+                <h4>Python & Django</h4>
+                <p>Backend</p>
+            </div>
+            <div class="experience-card">
+                <h4>Data Analysis</h4>
+                <p>Insights & Reports</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="carousel">
+        <img src="{% static 'images/darc.jpg' %}" alt="code snipset 1">
+        <img src="{% static 'images/bright.jpg' %}" alt="code snipset 2">
+        </div>
+
+
+</div>
+
+
+
+
+<section class="services-section" id="services">
+  <h2 class="section-title">What I Do</h2>
+  
+  <div class="services-carousel-container">
+    <button class="carousel-control prev" aria-label="Previous service">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    
+    <div class="services-carousel">
+      <div class="service-card">
+        <h3>Front-End Development</h3>
+        <p>
+          I design and develop responsive, accessible, and visually appealing user interfaces using HTML, CSS, and JavaScript. 
+          My goal is to ensure websites not only look great across devices but also feel smooth and intuitive to use.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Back-End Development</h3>
+        <p>
+          I build secure, scalable server-side logic and APIs using Python and Django. 
+          This includes managing databases, handling user authentication, and ensuring the application's logic performs efficiently behind the scenes.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Full-Stack Development</h3>
+        <p>
+          I combine my front-end and back-end skills to deliver complete web applications from start to finish. 
+          I enjoy bridging the gap between design and functionality, ensuring a seamless flow from the user interface to the database.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Software Development</h3>
+        <p>
+          I create software tools and applications tailored to meet specific needs — whether it's automating tasks, building a custom management system, 
+          or crafting a tool to solve a unique challenge. Clean architecture and maintainable code are always a priority.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Teaching People How to Code</h3>
+        <p>
+          I'm passionate about making tech accessible. I help beginners understand programming concepts by breaking down complex topics 
+          into digestible lessons, with real-world examples that make learning fun and practical.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Data Analysis</h3>
+        <p>
+          I use tools like Python, Pandas, and visualization libraries to explore and analyze data. 
+          Whether it's finding trends, generating reports, or making data-driven decisions, I turn raw data into useful insights.
+        </p>
+      </div>
+    </div>
+    
+    <button class="carousel-control next" aria-label="Next service">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="carousel-dots"></div>
+</section>
+
+
+
+<section class="projects-section" id ="portfolio">
+  <h2 class="section-title">Projects Showcase</h2>
+  <div class="projects-grid">
+    
+    <!-- City Project -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="{% static 'images/city.png' %}" alt="City Project Screenshot" class="project-image">
+        <div class="project-overlay"></div>
+      </div>
+      <div class="project-content">
+        <h3>City — Property Listing Platform</h3>
+        <p>An intuitive platform for landlords and tenants, offering geolocation, comparisons, and smart reviews.</p>
+        <a href="https://city-6oao.onrender.com/" target="_blank" class="project-link">
+          Visit Site
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Duka Project -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="{% static 'images/shop.png' %}" alt="Duka Project Screenshot" class="project-image">
+        <div class="project-overlay"></div>
+      </div>
+      <div class="project-content">
+        <h3>Duka — E-Commerce Web App</h3>
+        <p>A complete online store with M-PESA integration, real-time notifications, and inventory control.</p>
+        <a href="https://duka-nnm9.onrender.com/" target="_blank" class="project-link">
+          Visit Site
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Firm Project -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="{% static 'images/firm.png' %}" alt="Firm Project Screenshot" class="project-image">
+        <div class="project-overlay"></div>
+      </div>
+      <div class="project-content">
+        <h3>Firm — Booking & Consultancy</h3>
+        <p>A sleek service booking platform with real-time appointment notifications and clear service navigation.</p>
+        <a href="https://firm-avr1.onrender.com/" target="_blank" class="project-link">
+          Visit Site
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LMS Project -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="{% static 'images/schoo.png' %}" alt="LMS Project Screenshot" class="project-image">
+        <div class="project-overlay"></div>
+      </div>
+      <div class="project-content">
+        <h3>E-Learning Management System</h3>
+        <p>An academic portal supporting course uploads, learner tracking, and performance analytics for all roles.</p>
+        <a href="https://e-learning-ciscom-cead.onrender.com/" target="_blank" class="project-link">
+          Visit Site
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hotel Website -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="{% static 'images/hote.png' %}" alt="Hotel Project Screenshot" class="project-image">
+        <div class="project-overlay"></div>
+      </div>
+      <div class="project-content">
+        <h3>Hotel Website</h3>
+        <p>Hotel booking platform with M-PESA/Paystack, virtual tours, and event reminders for guests.</p>
+        <a href="https://hotelsite-2kz4.onrender.com/" target="_blank" class="project-link">
+          Visit Site
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <section class="contact-section" id="contact">
+  <h2 class="section-title">Contact Me</h2>
+
+  <div class="contact-wrapper">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <p>adamssquare4@gmail.com</p>
+      </div>
+      
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <p>+254 720659798</p>
+      </div>
+      
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <p>Nairobi, Kenya</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form method="POST" class="contact-form">
+      {% csrf_token %}
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <svg class="input-icon" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <svg class="input-icon" viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      
+      <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <svg class="input-icon" viewBox="0 0 24 24">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      
+      <button type="submit" class="submit-btn">
+        <span>Send Message</span>
+        <svg viewBox="0 0 24 24">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+
+    <script>
+        const text = "Hi, I'm  Adams — a web/software developer.";
+        const typingElement = document.getElementById("typing-text");
+        let index = 0;
+
+        function typeNextChar() {
+            if (index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeNextChar, 100); // 100ms delay per character
+            }
+        }
+
+        window.onload = typeNextChar;
+    </script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.services-carousel');
+  const cards = document.querySelectorAll('.service-card');
+  const prevBtn = document.querySelector('.carousel-control.prev');
+  const nextBtn = document.querySelector('.carousel-control.next');
+  const dotsContainer = document.querySelector('.carousel-dots');
+  
+  let visibleCards = 1;
+  let totalSlides = 0;
+  let currentSlide = 0;
+  
+  // Initialize carousel
+  function initCarousel() {
+    // Calculate visible cards based on screen size
+    if (window.innerWidth >= 992) {
+      visibleCards = 3;
+    } else if (window.innerWidth >= 768) {
+      visibleCards = 2;
+    } else {
+      visibleCards = 1;
+    }
+    
+    // Calculate total slides needed
+    totalSlides = Math.ceil(cards.length / visibleCards);
+    
+    // Create dots
+    createDots();
+    
+    // Update carousel state
+    updateCarousel();
+  }
+  
+  // Create navigation dots
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('carousel-dot');
+      dot.dataset.slide = i;
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+  
+  // Update carousel state
+  function updateCarousel() {
+    // Update active dot
+    document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+    
+    // Enable/disable buttons based on current slide
+    prevBtn.disabled = currentSlide === 0;
+    nextBtn.disabled = currentSlide === totalSlides - 1;
+  }
+  
+  // Navigate to specific slide
+  function goToSlide(slideIndex) {
+    currentSlide = Math.max(0, Math.min(slideIndex, totalSlides - 1));
+    const scrollPosition = currentSlide * carousel.offsetWidth;
+    
+    carousel.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+    
+    updateCarousel();
+  }
+  
+  // Go to next slide
+  function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+      goToSlide(currentSlide + 1);
+    } else {
+      goToSlide(0); // Loop to first slide
+    }
+  }
+  
+  // Go to previous slide
+  function prevSlide() {
+    if (currentSlide > 0) {
+      goToSlide(currentSlide - 1);
+    } else {
+      goToSlide(totalSlides - 1); // Loop to last slide
+    }
+  }
+  
+  // Handle scroll events to detect current slide
+  function handleScroll() {
+    const scrollPosition = carousel.scrollLeft;
+    const slideWidth = carousel.offsetWidth;
+    currentSlide = Math.round(scrollPosition / slideWidth);
+    updateCarousel();
+  }
+  
+  // Event listeners
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+  carousel.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', initCarousel);
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+  });
+  
+  // Initialize
+  initCarousel();
+});
+</script>
+
+
+
+<script>
+  // Message system functionality
+  function showMessage(type, title, text, duration = 4000) {
+    const container = document.getElementById('message-container');
+    
+    // Create message element
+    const message = document.createElement('div');
+    message.className = `message message-${type}`;
+    
+    // Set icon based on type
+    let iconPath = '';
+    switch(type) {
+      case 'success':
+        iconPath = '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>';
+        break;
+      case 'error':
+        iconPath = '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>';
+        break;
+      case 'warning':
+        iconPath = '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>';
+        break;
+      default:
+        iconPath = '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>';
+    }
+    
+    message.innerHTML = `
+      <svg class="message-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        ${iconPath}
+      </svg>
+      <div class="message-content">
+        <div class="message-title">${title}</div>
+        <div class="message-text">${text}</div>
+      </div>
+      <button class="message-close" aria-label="Close message">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    `;
+    
+    // Add close functionality
+    const closeBtn = message.querySelector('.message-close');
+    closeBtn.addEventListener('click', () => {
+      message.style.animation = 'fadeOut 0.4s forwards';
+      setTimeout(() => message.remove(), 400);
+    });
+    
+    // Auto-remove after duration
+    if (duration > 0) {
+      setTimeout(() => {
+        message.style.animation = 'fadeOut 0.4s forwards';
+        setTimeout(() => message.remove(), 400);
+      }, duration);
+    }
+    
+    // Add to container
+    container.appendChild(message);
+    
+    // Return message element for manual control
+    return message;
+  }
+
+  // Example usage:
+  // showMessage('success', 'Success!', 'Your message has been sent successfully.');
+  // showMessage('error', 'Error', 'Something went wrong. Please try again.');
+  // showMessage('warning', 'Warning', 'This action cannot be undone.');
+</script>
+
+
+
+<script>
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+}
+</script>
+{% endblock %}
